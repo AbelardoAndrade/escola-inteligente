@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola do Futuro - Conectando Mentes e Cuidando de Corações</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "gsap": "https://esm.sh/gsap@3.12.2",
+            "three": "https://esm.sh/three@0.154.0",
+            "swiper": "https://esm.sh/swiper@10.0.4",
+            "gsap/ScrollToPlugin": "https://esm.sh/gsap@3.12.2/ScrollToPlugin"
+        }
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Escola do Futuro</div>
+        <button class="hamburger" aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="#inicio">Início</a>
+            <a href="#seguranca">Segurança</a>
+            <a href="#aprendizagem">Aprendizagem</a>
+            <a href="#parceria">Parceria</a>
+            <button class="cta-button">Agende uma Visita</button>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>A Educação do Amanhã, Hoje</h1>
+            <h2>Segurança, Inovação e Desenvolvimento Integral</h2>
+            <p>Nossa escola une tecnologia pensada para cuidar, personalizar e preparar seu filho: segurança inteligente, aprendizagem personalizada e habilidades para o século XXI.</p>
+            <div class="features">
+                <div class="feature">
+                    <h3>Segurança Conectada <span class="toggle-icon">▼</span></h3>
+                    <p>Monitoramento inteligente, alertas em tempo real e controle de acesso.</p>
+                    <div class="details">
+                        <p>Nossa segurança conectada utiliza tecnologias como NFC, biometria e QR seguro para monitorar entradas e saídas, enviando alertas em tempo real aos pais. Câmeras inteligentes com análise local detectam comportamentos atípicos, priorizando a privacidade. Sensores ambientais garantem a qualidade do ar, e botões de emergência ativam protocolos de segurança, tudo para garantir um ambiente protegido e tranquilo.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <h3>Aprendizagem Personalizada <span class="toggle-icon">▼</span></h3>
+                    <p>Plataformas adaptativas, portfólios digitais e laboratórios mão-na-massa.</p>
+                    <div class="details">
+                        <p>Através de plataformas adaptativas com IA, personalizamos o percurso de aprendizado de cada aluno, oferecendo trilhas e exercícios específicos. Lousas digitais e laboratórios maker com robótica, impressoras 3D e VR/AR transformam a teoria em projetos práticos e imersivos, tornando o aluno protagonista de seu próprio aprendizado.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <h3>Preparação para o Futuro <span class="toggle-icon">▼</span></h3>
+                    <p>Robótica, programação, VR/AR e pensamento crítico.</p>
+                    <div class="details">
+                        <p>Preparamos seu filho para os desafios do século XXI com aulas de robótica, programação e projetos de IoT educacional. A Realidade Virtual e Aumentada oferece experiências imersivas, desenvolvendo o pensamento crítico e habilidades digitais essenciais para a universidade e o mercado de trabalho.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="seguranca" class="security">
+        <h2>Ambiente Protegido - Transparente, Rigoroso e Humano</h2>
+        <div class="security-features">
+            <div class="security-item">
+                <h3>Controle de Acesso <span class="toggle-icon">▼</span></h3>
+                <p>NFC, biometria e QR seguro com alertas instantâneos</p>
+                <div class="details">
+                    <p>Utilizamos NFC, biometria e QR codes seguros para garantir que apenas pessoas autorizadas acessem o campus. Os pais recebem alertas instantâneos no aplicativo sempre que o aluno entra ou sai da escola, proporcionando total transparência e tranquilidade.</p>
+                </div>
+            </div>
+            <div class="security-item">
+                <h3>Câmeras Inteligentes <span class="toggle-icon">▼</span></h3>
+                <p>Análise em tempo real com privacidade preservada</p>
+                <div class="details">
+                    <p>Nossas câmeras inteligentes realizam análise de comportamento on-edge, detectando situações incomuns sem gravar desnecessariamente e processando dados localmente para proteger a privacidade dos alunos. O foco é prevenir e alertar, não monitorar individualmente.</p>
+                </div>
+            </div>
+            <div class="security-item">
+                <h3>Sensores Ambientais <span class="toggle-icon">▼</span></h3>
+                <p>Monitoramento de qualidade do ar e condições ideais</p>
+                <div class="details">
+                    <p>Sensores de CO2, temperatura, umidade e fumaça monitoram constantemente a qualidade do ar e o conforto ambiental. Isso permite a gestão automática da ventilação e alertas para a equipe, garantindo um ambiente saudável que favorece a concentração e o bem-estar.</p>
+                </div>
+            </div>
+            <div class="security-item">
+                <h3>Transporte Seguro <span class="toggle-icon">▼</span></h3>
+                <p>Rastreamento em tempo real do transporte escolar</p>
+                <div class="details">
+                    <p>O transporte escolar é equipado com GPS e sistemas de check-in via QR/NFC, permitindo que os pais acompanhem o trajeto do ônibus em tempo real e recebam notificações de embarque e desembarque, assegurando a segurança durante todo o percurso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aprendizagem" class="learning">
+        <h2>Tornamos seu Filho Protagonista do Próprio Aprender</h2>
+        <div class="learning-grid">
+            <div class="learning-item">
+                <h3>Plataforma Adaptativa <span class="toggle-icon">▼</span></h3>
+                <p>IA que personaliza o aprendizado de cada aluno</p>
+                <div class="details">
+                    <p>Nossa plataforma utiliza inteligência artificial para diagnosticar continuamente o progresso de cada aluno, sugerindo trilhas de aprendizado, exercícios e reforço personalizados. Isso otimiza o ensino, foca nas necessidades individuais e oferece relatórios detalhados para pais e professores.</p>
+                </div>
+            </div>
+            <div class="learning-item">
+                <h3>Laboratório Maker <span class="toggle-icon">▼</span></h3>
+                <p>Robótica, impressão 3D e projetos práticos</p>
+                <div class="details">
+                    <p>No laboratório maker, os alunos transformam ideias em realidade. Com kits de robótica (Arduino, micro:bit), impressoras 3D e ferramentas diversas, eles desenvolvem projetos interdisciplinares que conectam ciência, matemática e criatividade, estimulando a inovação e a resolução de problemas.</p>
+                </div>
+            </div>
+            <div class="learning-item">
+                <h3>Realidade Virtual <span class="toggle-icon">▼</span></h3>
+                <p>Aulas imersivas e experiências únicas</p>
+                <div class="details">
+                    <p>A Realidade Virtual e Aumentada leva as aulas para outro nível. Alunos podem explorar a Roma Antiga, dissecar órgãos virtuais ou viajar para o espaço, fixando conceitos complexos de forma imersiva e memorável, tornando o aprendizado dinâmico e cativante.</p>
+                </div>
+            </div>
+            <div class="learning-item">
+                <h3>IoT Educacional <span class="toggle-icon">▼</span></h3>
+                <p>Projetos práticos com tecnologia aplicada</p>
+                <div class="details">
+                    <p>Através de projetos práticos de Internet das Coisas (IoT), os alunos montam seus próprios sensores (por exemplo, para monitorar a horta escolar), coletam e analisam dados reais. Essa abordagem ativa ensina não apenas tecnologia, mas também estatística, biologia e pensamento sistêmico, aplicando o conhecimento no mundo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="parceria" class="partnership">
+        <h2>Parceria Escola-Família</h2>
+        <div class="app-preview">
+            <h3>App Exclusivo para Pais</h3>
+            <div class="app-features">
+                <div class="app-feature">
+                    <h4>Acompanhamento em Tempo Real <span class="toggle-icon">▼</span></h4>
+                    <p>Notificações de entrada/saída, boletim e agenda</p>
+                    <div class="details">
+                        <p>Nosso aplicativo exclusivo para pais oferece um acompanhamento completo: notificações de frequência, entradas e saídas do aluno, boletins e a agenda escolar sempre atualizada. Tenha todas as informações importantes na palma da sua mão.</p>
+                    </div>
+                </div>
+                <div class="app-feature">
+                    <h4>Comunicação Direta <span class="toggle-icon">▼</span></h4>
+                    <p>Chat com professores e coordenação</p>
+                    <div class="details">
+                        <p>O aplicativo permite comunicação direta e segura com professores e a coordenação pedagógica. Tire dúvidas, receba feedback e participe ativamente da vida escolar do seu filho de forma rápida e eficiente.</p>
+                    </div>
+                </div>
+                <div class="app-feature">
+                    <h4>Portfólio Digital <span class="toggle-icon">▼</span></h4>
+                    <p>Acompanhe o desenvolvimento do seu filho</p>
+                    <div class="details">
+                        <p>O portfólio digital é um registro do percurso educacional do seu filho, incluindo projetos, trabalhos e avaliações. Os pais podem acompanhar o desenvolvimento, as conquistas e o progresso acadêmico ao longo do tempo, celebrando cada etapa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Criadores do Projeto</h3>
+                <p><strong>Felipe Lopes Barletta</strong> - RA: 824152243 - Marketing</p>
+                <p><strong>Abelardo Andrade Silva</strong> - RA: 821219021 - Engenharia da Computação</p>
+                <p><strong>Arthur da Silva Rodrigues</strong> - RA: 1072323314 - ADS</p>
+                <p><strong>Luis Eduardo Evangelista de Souza</strong> - RA: 824131032 - Marketing</p>
+                <p><strong>Vanessa Rodrigues de Azevedo</strong> - RA: 192210737 - Medicina Veterinária</p>
+                <p><strong>Pedro Victor Azevedo de Carvalho</strong> - RA: 192210695 - Medicina Veterinária</p>
+                <p><strong>Ismael Adonias</strong> - RA: **********</p>
+            </div>
+            <div class="footer-section full-width">
+                <p>Ânima Educação - Inglês Instrumental & Pensamento Digital</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

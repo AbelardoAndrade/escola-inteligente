@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Noto+Sans:wght@400;500;700&display=swap');
+
+:root {
+    --primary: #2563eb;
+    --secondary: #1e40af;
+    --text: #1f2937;
+    --background: #ffffff;
+    --accent: #3b82f6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between; /* Adjusted for hamburger */
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.cta-button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: var(--secondary);
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; /* Above nav-links when open */
+    width: 30px;
+    height: 24px;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--text);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(10.5px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-45deg);
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('hero-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+/* Base styles for interactive cards */
+.feature, .security-item, .learning-item, .app-feature {
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer; /* Indicate interactivity */
+    overflow: hidden; /* Important for max-height transition */
+}
+
+.feature:hover, .security-item:hover, .learning-item:hover, .app-feature:hover {
+    transform: translateY(-5px);
+}
+
+.feature h3, .security-item h3, .learning-item h3, .app-feature h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    position: relative;
+}
+
+.toggle-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+/* Styles for the hidden details */
+.details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease;
+    opacity: 0;
+    padding-top: 0;
+}
+
+.details.active {
+    max-height: 500px; /* Large enough value to contain content */
+    opacity: 1;
+    padding-top: 1rem;
+}
+
+.feature.active .toggle-icon,
+.security-item.active .toggle-icon,
+.learning-item.active .toggle-icon,
+.app-feature.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+section {
+    padding: 6rem 2rem;
+}
+
+.security-features, .learning-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.security-item, .learning-item {
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.security-item:hover, .learning-item:hover {
+    transform: translateY(-5px);
+}
+
+.app-preview {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.app-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+footer {
+    background: var(--text);
+    color: white;
+    padding: 4rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.footer-section {
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section.full-width {
+    grid-column: 1 / -1;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .features, .security-features, .learning-grid, .app-features {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        /* Revert nav flex-direction and align for mobile hamburger */
+        justify-content: space-between;
+        padding: 1rem;
+        /* Position fixed is already global, no need to set relative here */
+    }
+
+    .logo {
+        width: auto; /* Allow logo to take natural width */
+        text-align: left; /* Align logo left */
+        margin-bottom: 0; /* Remove previous margin */
+    }
+
+    /* Show hamburger menu icon */
+    .hamburger {
+        display: flex;
+        margin-right: 1rem; /* Spacing from edge */
+    }
+
+    /* Hide and style nav-links for mobile menu */
+    .nav-links {
+        position: absolute;
+        top: 100%; /* Position below the nav bar */
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        padding: 0; /* No initial padding, will expand with active state */
+        max-height: 0; /* Hidden by default */
+        overflow: hidden;
+        transition: max-height 0.5s ease-out, padding 0.5s ease-out, box-shadow 0.3s ease;
+        box-shadow: none; /* No shadow when collapsed */
+    }
+
+    .nav-links.active {
+        max-height: 500px; /* Large enough value to contain all links */
+        padding: 2rem 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Add shadow when open */
+    }
+
+    .nav-links a, .nav-links .cta-button {
+        width: 80%; /* Make links take more width */
+        text-align: center;
+        padding: 0.75rem 1.5rem; /* Larger touch target */
+        margin-bottom: 1rem; /* Space between links */
+    }
+    /* Remove specific margin-top for cta-button here, margin-bottom on prev links is enough */
+    .nav-links .cta-button {
+        margin-top: 0; /* Reset margin top */
+    }
+
+    .hero {
+        padding-top: 6rem; /* Adjust padding for fixed nav (non-expanded) */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 4rem 1rem;
+    }
+
+    .features, .security-features, .learning-grid, .app-features, .footer-content {
+        grid-template-columns: 1fr; /* Stack all items */
+        gap: 1.5rem;
+    }
+    .feature, .security-item, .learning-item, .app-feature {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .logo {
+        font-size: 1.3rem;
+    }
+}
